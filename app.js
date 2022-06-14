@@ -18,13 +18,13 @@ app.get("/user", (req, res) => {
 });
 
 app.post("/user", (req, res) => {
-  user=req.body;
-  res.send('data has been added succesfully');
+  user = req.body;
+  res.send("data has been added succesfully");
 });
 
 app.patch("/user", (req, res) => {
   let obj = req.body;
-  for(let key in obj){
+  for (let key in obj) {
     user[key] = obj[key];
   }
   res.json(user);
@@ -33,4 +33,7 @@ app.patch("/user", (req, res) => {
 app.delete("/user", (req, res) => {
   user = {};
   res.json(user);
+});
+app.get("/user/:id", (req, res) => {
+  res.json(req.params);
 });
