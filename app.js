@@ -19,7 +19,7 @@ app.get("/user", (req, res) => {
 
 app.post("/user", (req, res) => {
   user = req.body;
-  res.send("data has been added succesfully");
+  res.send("Post Update");
 });
 
 app.patch("/user", (req, res) => {
