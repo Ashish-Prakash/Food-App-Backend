@@ -7,7 +7,7 @@ app.listen(port, function () {
 app.use(express.json());
 let user = {};
 app.get("/", (request, response) => {
-  response.send("<h1>Hello</h1>");
+  response.send("<h1>Hello Get</h1>");
 });
 app.get("/home", (req, res) => {
   res.sendFile("./views/index.html", { root: __dirname });
